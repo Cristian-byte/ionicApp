@@ -37,13 +37,13 @@ export class ListasComponent implements OnInit {
 
     // this.router.navigateByUrl('/tabs/tab1/agregar');
       const alert = await this.alertCtrl.create({
-        header: 'Editar lista',
+        header: 'Editar Nombre de la Lista',
         inputs: [
           {
             name: 'titulo',
             type: 'text',
             value: lista.titulo,
-            placeholder: 'nombre de la lista',
+            placeholder: 'Nombre de la Lista',
 
           }
         ],
@@ -60,7 +60,7 @@ export class ListasComponent implements OnInit {
             text: 'Actualizar',
             handler: ( data ) => {
               console.log( data );
-              if (data.titulo.length === 0) {
+              if ( data.titulo.length === 0 ) {
                 return;
               }
 
